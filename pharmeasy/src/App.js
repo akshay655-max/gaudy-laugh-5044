@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import ShopByCategory from './Components/ShopByCategory';
+import AllRoutes from './Routes/AllRoutes';
+import Footer from './Components/Footer';
+import TextContent from './Components/TextContent';
+import SimplifyLogo from './Components/SimplifyLogo';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+     <ShopByCategory/>
+    <AllRoutes/>
+    <SimplifyLogo/>
+    <TextContent/>
+    <Footer/>
     </div>
   );
 }
