@@ -5,9 +5,9 @@ const TextContent = () => {
   return (
     <Stack w="95%"  m="auto" mt="60px" spacing="15px" >
 
-        <box>
+        <Box>
         <Heading as='h5' size='md' textAlign="justify">Your One-Stop Online Pharmacy - PharmEasy</Heading>
-        </box>
+        </Box>
         <Box >
             <Stack>
         <Heading as='h5' size='sm' textAlign="justify">We've got India Covered! </Heading>
@@ -83,6 +83,7 @@ const TextContent = () => {
 
     </Stack>
   )
+  
 }
 
 export default TextContent

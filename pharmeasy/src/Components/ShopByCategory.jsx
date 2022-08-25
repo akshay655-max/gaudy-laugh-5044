@@ -4,22 +4,25 @@ import { Link } from "react-router-dom"
 
 
 
+
 const ShopByCategory = () => {
+
+
   return (
     <div>
-   <Box display="flex" justifyContent="flex-start" w="90%"   margin="auto"  marginTop="20px">
+   <Box display="flex" justifyContent="flex-start" w="90%"   margin="auto"  marginTop="300px">
    <Heading as='h3' size='lg'>Shop by Categories</Heading>
    </Box>
     
     
  <SimpleGrid columns={[1,2,6,8]} spacing={10}  w='90%' margin="auto"  marginTop="20px">
-    <Box w='150px' h='150px' border="0.5px" borderRadius="10px" boxShadow='xs' ><Link to="/covidessential">
+    <Box w='150px' h='150px' border="0.5px" borderRadius="10px" boxShadow='xs'><Link to="/covidessential">
     <Stack spacing='24px'>
         <Image src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/6d462f424a43372ea8b7b6f8ca13e052.png?f=png?dim=360x0"  boxSize='100%'/>
         <Text   fontWeight='semibold' >Covid essentials</Text> 
     </Stack>
-    </Link>
     
+    </Link>
    
   </Box>
 
@@ -79,7 +82,7 @@ const ShopByCategory = () => {
   </SimpleGrid>
 
 
-
+  
 
     </div>
   )

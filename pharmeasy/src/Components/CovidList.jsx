@@ -5,7 +5,7 @@ const CovidList = ({image,price,title,_id}) => {
     
   return (
    
-    <Box  borderWidth='1px' borderRadius='lg' overflow='hidden' mt="100px" display="flex" flexDirection="column" justifyContent="space-around" border="1px" >
+    <Box  borderWidth='1px' borderRadius='lg' overflow='hidden' mt="200px" display="flex" flexDirection="column" justifyContent="space-around" border="1px"  >
       <Image src={image} alt="err"  w="75%" display="block" margin="auto" mt="20px" />
 
       <Box p='6'>
