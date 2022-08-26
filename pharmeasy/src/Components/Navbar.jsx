@@ -17,11 +17,16 @@ import {FiSmartphone,FiUser} from "react-icons/fi"
 import {TbDiscount2} from "react-icons/tb"
 import {BsCart} from "react-icons/bs"
 import {NavLink,Link } from "react-router-dom"
+import { AppContext } from "../Context/ContextProvider";
+import { ProfileMenu } from "../ChakraComponent/ProfileMenu";
 const Navbar = () => {
+  const{isAuth}=React.useContext(AppContext);
+
+  console.log(isAuth);
   return (
       <div >
-    <Box  display="flex" justifyContent="space-between" height="89px" boxShadow='xs' w="100%" m="auto"   position="fixed" top="0" zIndex="1" bg="#fafafa" >
-      <Box display="flex" ml="40px" >
+    <Box  display="flex" justifyContent="space-between" height="89px" boxShadow='xs' w="100%" m="auto"   position="fixed" top="0" zIndex="1" bg="#fafafa">
+      <Box display="flex" >
       <Link to="/"> <Box p="4">
           <Image src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=360x0" />
         </Box></Link> 
@@ -46,7 +51,7 @@ const Navbar = () => {
       </Box>
  
 
-     <Box display="flex" w="400px"justifyContent="space-around" alignItems="center" >
+     <Box  display="flex" w="500px"justifyContent="space-around" alignItems="center" >
      <a href="https://apps.apple.com/IN/app/id982432643?mt=8"  _hover={{ textDecoration: 'none'}} >    <Box display="flex" justifyContent="space-evenly" alignItems="center" border="none" w="150px" bg="
 #f2fdff" h="40px" borderRadius="5px"   _hover={{ bg:"#eef4ff" }}>
          
@@ -56,9 +61,11 @@ const Navbar = () => {
         </Box></a>
         
 
-         <Box display="flex" justifyContent="space-evenly" alignItems="center" w="250px"  height="35px" >
-         <DrawerLogin/>
-         <a href="https://pharmeasy.in/offers?src=header"  _hover={{ textDecoration: "dotted"}}><Box display="flex" w="75px" justifyContent="space-between"> <TbDiscount2 fontSize="22px" /><Text  >Offers</Text></Box></a>
+         <Box display="flex" justifyContent="space-evenly" alignItems="center" w="300px"  height="35px" >
+
+         {isAuth ?<ProfileMenu/>: <DrawerLogin/>}  
+
+         <a href="https://pharmeasy.in/offers?src=header"  _hover={{ textDecoration: "dotted"}}><Box display="flex" w="75px" justifyContent="space-around"> <TbDiscount2 fontSize="22px" /><Text  >Offers</Text></Box></a>
         <Box display="flex" w="60px" justifyContent="space-between"><BsCart fontSize="22px" /><Text>Cart</Text></Box> 
          </Box>
 
