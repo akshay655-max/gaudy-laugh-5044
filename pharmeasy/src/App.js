@@ -7,15 +7,17 @@ import TextContent from './Components/TextContent';
 import SimplifyLogo from './Components/SimplifyLogo';
 import Navbar from './Components/Navbar';
 import SearchBar from './Components/SearchBar';
+import UncontrolledExample from './Bootstrap/UncontrolledExample';
+
+
 
 function App() {
   return (
     <div className="App">
      <Navbar/>
      <SearchBar/>
-     <AllRoutes/>
-   
      <ShopByCategory/>
+     <AllRoutes/>
    
     <SimplifyLogo/>
     <TextContent/>

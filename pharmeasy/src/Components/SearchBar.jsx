@@ -23,7 +23,10 @@ const SearchBar = () => {
             placeholder="Search for"
             borderRadius="20px"
             _focus={{outline:"none"}}
-            bg="white"
+            focusBorderColor="none
+            "
+         
+        
           />
         </InputGroup>
         <Box
@@ -34,7 +37,7 @@ const SearchBar = () => {
           right="0px"
           h="100%"
         >
-          <Button colorScheme="teal" h="90%" borderRadius="20px" mr="4px">
+          <Button colorScheme="teal" h="90%" borderRadius="20px" mr="4px" >
             Search
           </Button>
         </Box>

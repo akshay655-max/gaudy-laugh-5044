@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Box,Badge,Image, SimpleGrid} from '@chakra-ui/react'
+import { AppContext } from '../Context/ContextProvider'
 
 const CovidList = ({image,price,title,_id}) => {
+ 
     
   return (
    
