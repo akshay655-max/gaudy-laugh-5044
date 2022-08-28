@@ -9,6 +9,12 @@ export const ContextProvider = ({children}) => {
     const[token,setToken]=useState();
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isModalVisible, setIsModalVisible] = useState(true);
+
+  const handleClick = () => {
+    setIsModalVisible(true);
+  
+  };
 
     const userLogin=(token)=>{
        setIsAuth(true);
@@ -21,7 +27,7 @@ export const ContextProvider = ({children}) => {
     }
 
   return (
-   < AppContext.Provider value={{isAuth,userLogin,setIsAuth,userLogout,email,password,setEmail,setPassword}} >
+   < AppContext.Provider value={{isModalVisible,setIsModalVisible,isAuth,userLogin,setIsAuth,userLogout,email,password,setEmail,setPassword,handleClick}} >
    {children}
    </AppContext.Provider>
   )

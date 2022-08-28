@@ -2,23 +2,32 @@ import React, { useEffect,useState } from 'react'
 import { getCovidData } from '../api/api';
 import CovidList from '../Components/CovidList';
 import { SimpleGrid } from '@chakra-ui/react';
+import { CircularProgress } from '@chakra-ui/react';
 
 
 
 const CovidEssentials = () => {
   const[data,setData]=useState([]);
+  const[isLoading,setIsLoading]=(false);
 
 
 
   useEffect(()=>{
-   getCovidData().then((res)=>{setData(res)}).catch((err)=>{
+   getCovidData().then((res)=>
+   { setIsLoading(true);
+     setData(res);
+     setIsLoading(false);
+    }).catch((err)=>{
+      setIsLoading(false);
      console.log(err);
    })
   },[])
 
 // console.log(data);
 
-  
+  if(isLoading){
+    return <CircularProgress isIndeterminate color='green.300' />
+  }
 
   return (
     <div>
