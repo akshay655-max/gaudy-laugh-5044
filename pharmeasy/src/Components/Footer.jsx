@@ -111,11 +111,11 @@ const Footer = () => {
          </Stack>
      </Box>
 
- <Box  >
+ <Box >
      <Stack spacing="20px">
      <Heading as='h4' size='md' mt="60px">Follow us on </Heading>
-    <HStack spacing="25px"  display="flex" justifyContent="center">
-     <Box  >
+    <HStack spacing="25px"  display="flex" justifyContent="flex-start"  >
+     <Box >
        <FaInstagram w="90px" />
      </Box>
      <Box>
@@ -131,7 +131,7 @@ const Footer = () => {
   </Stack>
 </Box>
 
-<Box mb="60px"  w="800px"  ml="30px" >
+<Box mb="60px"  w="800px"  ml="30px">
      <Stack spacing="20px">
      <Heading as='h4' size='md' mt="60px" textAlign="left">Our Payment Partners </Heading>
     <HStack spacing="25px"  display="flex" justifyContent="flex-start">

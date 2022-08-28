@@ -6,15 +6,20 @@ import Footer from './Components/Footer';
 import TextContent from './Components/TextContent';
 import SimplifyLogo from './Components/SimplifyLogo';
 import Navbar from './Components/Navbar';
+import SearchBar from './Components/SearchBar';
 
 function App() {
   return (
     <div className="App">
      <Navbar/>
+     <SearchBar/>
      <AllRoutes/>
+   
      <ShopByCategory/>
+   
     <SimplifyLogo/>
     <TextContent/>
+    
     <Footer/>
     </div>
   );
